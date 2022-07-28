@@ -370,8 +370,8 @@ body {
    z-index: 0;
 }
 .container-image:hover {
-   -webkit-transform: scale(1.05);
-	transform: scale(1.05);
+   -webkit-transform: scale(1.03);
+	transform: scale(1.03);
    z-index: 0;
 }
 
