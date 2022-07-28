@@ -3,8 +3,8 @@ TEAM A03 PROJECT HTML CSS
 
 NAMA KELOMPOK A03-POWER RANGER :
 
-1. Nirmla Agatha Santoso
-2. Prima Agus Kuncoro
-3. Nanda Septyana
-4. Putu Pasek Widiadnyana
-5. Muhammad Ibrahim
+1. Nirmala Agatha Santoso (152308829100-627) 
+2. Prima Agus Kuncoro (152308829101-232)
+3. Nanda Septyana (152308829100-323)
+4. Putu Pasek Widiadnyana (152308829101-241)
+5. Muhammad Ibrahim (152308829101-33)
