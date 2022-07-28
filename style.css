@@ -92,6 +92,7 @@ body {
     padding: 2px;
     position: sticky;
     top: 0;
+    z-index: 99;
  }
 
  nav a {
@@ -345,3 +346,118 @@ body {
 .fa-linkedin-square:hover {
   color: white;
 }
+
+.container-image {
+	-webkit-transform: scale(.99);
+	transform: scale(.99);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+   z-index: 0;
+}
+.container-image:hover {
+   -webkit-transform: scale(1.05);
+	transform: scale(1.05);
+   z-index: 0;
+}
+
+ #form-container {
+   position: relative;
+   padding: 50px 0px;
+   border-radius: 0;
+   background: transparent;
+   margin-left: auto;
+   margin-right: auto;
+ }
+ 
+ .form-wrapper {
+   max-width: 30%;
+   min-width: 300px;
+   padding: 50px 30px 50px 30px;
+   margin: 50px auto;   
+   background-color: #ffffff;
+   border-radius: 5px;
+   box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+ }
+ 
+ .form-heading h1 {
+   text-align: left;
+   margin-bottom: -25px;
+}
+
+ .form-group {
+   position:relative;
+   margin-bottom: -15px;
+   & + .form-group {
+     margin-top: 30px;
+   }
+ }
+ 
+ .form-label {
+   position: absolute;
+   left: 0;
+   top: 55px;
+   color: #999;
+   z-index: 10;
+   padding-left: 10px;
+   cursor: text;
+   -webkit-transition: transform 200ms ease-out, font-size 200ms ease-out;
+   -moz-transition: transform 200ms ease-out, font-size 200ms ease-out;
+   transition: transform 200ms ease-out, font-size 200ms ease-out;
+ }
+ 
+ .focused .form-label {
+   transform: translateY(-190%);
+   font-size: 12px;
+   color: #141733;
+   cursor: default !important;
+ }
+ 
+ .form-input {
+   position: relative;
+   padding: 12px 0px 5px 0;
+   width: 100%;
+   outline: 0;
+   border: 0;
+   box-shadow: 0 1px 0 0 #e5e5e5;
+   -webkit-transition: box-shadow 150ms ease-out;
+   -moz-transition: box-shadow 150ms ease-out;
+   transition: box-shadow 150ms ease-out;
+   
+   &:focus {
+     box-shadow: 0 2px 0 0 blue;
+   }
+ }
+ 
+ .contact-button {
+   color: #fff;
+   margin-top: 55px;
+   letter-spacing: 2px;
+    width: 100%;
+   padding: 9px;
+   background-color: #141733;
+   border: 0px;
+   border-radius: 8px;
+    cursor: pointer;
+   -webkit-transition: all 200ms;
+   -moz-transition: all 200ms;
+   transition: all 200ms;
+ }
+ .contact-button:hover {
+   background-color: #741be1e3;
+ }
+ 
+ input[type="text"], input[type="password"], input[type="tel"], input[type="email"], input.text, input.title, textarea, select {
+   font-size: 16px;
+   background-color: #b7b7b74d;
+   padding: 10px;
+   color: #7d7d7d;;
+   border: 0px ;
+   transition: border .1s linear;
+   width: 95%;
+   -webkit-transition: all 200ms;
+   -moz-transition: all 200ms;
+   transition: all 200ms;
+ }
+ 
+
+

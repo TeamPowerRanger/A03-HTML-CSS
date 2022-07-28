@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
 </head>
 <body>
 
@@ -111,13 +113,31 @@
                  <header>
                      <h2>Golang Batch3 (Class Gol3-5)</h2>
                      <h3>A03 - Power Ranger</h3>
-                    
-                        <p>Nirmala Agatha Santoso (152308829100-627)</p>
-                        <p>Prima Agus Kuncoro (152308829101-232)</p>
-                        <p>Nanda Septyana (152308829100-323)</p>
-                        <p>Putu Pasek Widiadnyana (152308829101-241)</p>
-                        <p>Muhammad Ibrahim (152308829101-33)</p>
+                        <div class="members">
+                            
+                            <div class="member">
+                                <div class="name">Nirmala Agatha Santoso</div>
+                                <div class="nomor">(152308829100-627)</div>
+                            </div>
+                            <div class="member">
+                                <div class="name">Prima Agus Kuncoro</div>
+                                <div class="nomor">(152308829101-232)</div>
+                            </div>
+                            <div class="member">
+                                <div class="name">Nanda Septyana</div>
+                                <div class="nomor">(152308829100-323)</div>
+                            </div>
+                            <div class="member">
+                                <div class="name">Putu Pasek Widiadnyana</div>
+                                <div class="nomor">(152308829101-241)</div>
+                            </div>
+                            <div class="member">
+                                <div class="name">Muhammad Ibrahim</div>
+                                <div class="nomor">(152308829101-33)</div>
+                            </div>
 
+                        </div>
+                        
                      <figure>
                         <img src="assets/image/power_ranger.jpg">
                         <figcaption id="email">Golang Batch 3 -  Class 5</figcaption>
@@ -136,7 +156,7 @@
 
             
             <div class="form">
-            <form action="mailto:emailmu@hahaha.com" method="post" enctype="text/plain">
+            <form action="mailto:emailmu@hahaha.com" method="post" enctype="text/plain" style="display:none">
                 <table border="0" cellspacing="0" cellpadding="4" width="90%">
                   <h4>CONTACT FORM</h4>
                   <tr><td width="30%"><div align="right">
@@ -159,7 +179,58 @@
                   <input type="submit" class="button" btname="submit" value="Send">
                   <input type="reset" class="button" name="reset" value="Delete"></td></tr>
                 </table>
-            </form>     
+            </form>
+
+            <div id="form-container">
+                <form id="contact-form" name="contact-form" method="POST" data-name="Contact Form">
+                    <div class="row">
+                    <!-- Title -->
+                    <div class="form-heading">
+                    <h1>Hubungi Kami</h1>
+                    </div>                        
+                    <!-- Name -->
+                    <div class="contact">
+                    <div class="form-group">
+                    <label class="form-label" for="name">Name</label>
+                    <input type="text" id="name" class="form form-control" name="name" data-name="Name">
+                    </div>
+                    </div>
+                                            
+                    <!-- E-mail -->
+                    <div class="contact">
+                    <div class="form-group">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" id="email" class="form form-control" name="email-address" data-name="email">
+                    </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="contact">
+                    <div class="form-group">
+                    <label class="form-label" for="number">Number</label>
+                    <input type="tel" id="number" class="form form-control" name="phone" data-name="number">
+                    </div>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="contact">
+                    <div class="form-group">
+                    <label class="form-label" for="text-area">Message</label>
+                    <textarea id="text-area" class="form textarea form-control" name="message" data-name="Text Area"></textarea>
+                    </div>
+                    </div>
+                                    
+                    </div>
+
+                    <!-- Form submission -->
+                    <button type="button" id="valid-form" class="contact-button">SEND</button>
+                    <div>
+                    </div>
+                    </form>
+
+                    </div>
+            
+
             </div>
         </aside>
     </main>
@@ -203,6 +274,28 @@
     		});
 		});
 	</script>
+
+    <script>
+        $(function(){
+            $('input, textarea').focus(function(){
+            $(this).parents('.form-group').addClass('focused');
+            });
+
+            $('input, textarea').blur(function(){
+            var inputValue = $(this).val();
+            if ( inputValue == "" ) {
+            $(this).removeClass('filled');
+            $(this).parents('.form-group').removeClass('focused');  
+            } else {
+            $(this).addClass('filled');
+            }
+            });
+            
+            $('#valid-form').click(function(){
+                swal("Terima Kasih!", "Anda akan kami hubungi jika kami mau!", "success");
+            });
+        });
+    </script>
 
 </body>
 </html>
