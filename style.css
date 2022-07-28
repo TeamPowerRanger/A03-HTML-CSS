@@ -219,6 +219,14 @@ body {
    
 }
 
+#radio5:checked ~ .first{
+   margin-left: -80%;
+   
+}
+
+
+
+
 .navigation-auto{
    position: absolute;
    display: flex;
@@ -261,6 +269,13 @@ body {
    background:#3d3d3c;
    
 }
+
+#radio5:checked ~ .navigation-auto .auto-btn4{
+   background:#3d3d3c;
+   
+}
+
+
 
 .message {
   padding: 10px 25px;
