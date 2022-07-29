@@ -290,17 +290,18 @@ body {
 
 
 .message {
-  padding: 10px 25px;
-  background-color: #FC6038;
-  cursor: pointer;
-  object-position: center;
-  color: white;
-  border-radius: 15px;
-}
+   padding: 10px 25px;
+   background-color: #FC6038;
+   cursor: pointer;
+   object-position: center;
+   color: white;
+   border-radius: 15px;
+   box-shadow: 2px 5px #5f1402;
+ }
 
 .message:hover{
    background-color: #d31010;
-   opacity: .5;
+   opacity: .8;
 }
 
 .message:active {
