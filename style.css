@@ -26,7 +26,19 @@ body {
     max-height: 500px;
     object-fit: cover;
     object-position: center;
+    -webkit-transform: scale(.99);
+    transform: scale(.99);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    z-index: 0;
  }
+
+.container-image:hover {
+   -webkit-transform: scale(1.03);
+	transform: scale(1.03);
+   z-index: 0;
+}
+
  .profile img, profile-me {
     width: 180px;
     height: 230px;
@@ -360,19 +372,6 @@ body {
 
 .fa-linkedin-square:hover {
   color: white;
-}
-
-.container-image {
-	-webkit-transform: scale(.99);
-	transform: scale(.99);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-   z-index: 0;
-}
-.container-image:hover {
-   -webkit-transform: scale(1.03);
-	transform: scale(1.03);
-   z-index: 0;
 }
 
  #form-container {
